@@ -2,7 +2,7 @@
  - hosts: localhost
    become: yes
    become_user: root
-   become_method: su
+   become_method: sudo
    tasks:
    - name: Clone a github repository
      git:
