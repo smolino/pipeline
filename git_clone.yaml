@@ -1,10 +1,11 @@
 ---
  - hosts: localhost
+   become_user: azureuser
    tasks:
    - name: Clone a github repository
      git:
        repo: https://github.com/entando/entando-pipelines.git
-       dest: /home/azureuser/Project
+       dest: /home/azureuser/Project/test
        clone: yes
        update: yes
 
