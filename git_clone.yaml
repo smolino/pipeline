@@ -13,7 +13,7 @@
    - name: Run Script
      shell: | 
        cd /home/azureuser/Project/test/entando-pipeline/macro/
-       ./ansible-mock-script {{ ticket_number }} 
+       ./ansible-mock-script "{{ ticket_number }}" 
      register: output
 
    - name: Print Results Tickets
