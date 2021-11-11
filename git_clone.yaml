@@ -7,8 +7,6 @@
        dest: /home/azureuser/Project
        clone: yes
        update: yes
-       single_branch: yes
-       version: experiment/ansible-mock
 
    - name: Run Script
      shell: | 
