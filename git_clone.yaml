@@ -3,14 +3,15 @@
    tasks:
    - name: Clone a github repository
      git:
-       repo: git https://github.com/entando/entando-pipelines.git
+       repo: https://github.com/entando/entando-pipelines.git
        dest: /home/azureuser/Project
        clone: yes
        update: yes
+       single_branch: yes
        version: experiment/ansible-mock
 
    - name: Run Script
-     shell: |
+     shell: | 
        cd /home/azureuser/entando-pipeline/macro/
        ./ansible-mock-script {{ ticket_number }} 
      register: output
