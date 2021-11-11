@@ -8,10 +8,11 @@
        dest: /home/azureuser/Project/test
        clone: yes
        update: yes
+       version: experiment/ansible-mock
 
    - name: Run Script
      shell: | 
-       cd /home/azureuser/entando-pipeline/macro/
+       cd /home/azureuser/Project/test/entando-pipeline/macro/
        ./ansible-mock-script {{ ticket_number }} 
      register: output
 
