@@ -1,0 +1,20 @@
+---
+ - hosts: localhost
+   tasks:
+   - name: Clone a github repository
+     git:
+       repo: git https://github.com/entando/entando-pipelines.git
+       dest: /home/azureuser/Project
+       clone: yes
+       update: yes
+       version: experiment/ansible-mock
+
+   - name: Run Script
+      shell: |
+        cd /home/azureuser/entando-pipeline/macro/
+        ./ansible-mock-script {{ ticket_number }} 
+      register: output
+
+   - name: Print Results Tickets
+     debug:
+       msg: "Ticket number {{output }}"
