@@ -1,6 +1,8 @@
 ---
  - hosts: localhost
-   become: azureuser
+   become: yes
+   become_user: azureuser
+   become_method: su
    tasks:
    - name: Clone a github repository
      git:
