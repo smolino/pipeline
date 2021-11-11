@@ -1,5 +1,5 @@
 ---
- - hosts: localhost
+ - hosts: test
    become_user: azureuser
    tasks:
    - name: Clone a github repository
