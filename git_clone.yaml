@@ -11,9 +11,9 @@
        version: experiment/ansible-mock
 
    - name: Run Script
-     shell: | 
-       cd /home/azureuser/Project/test/entando-pipeline/macro/
-       ./ansible-mock-script "{{ ticket_number }}" 
+     shell: ./ansible-mock-script "{{ ticket_number }}"
+     args:
+       chdir: /home/azureuser/Project/test/macro
      register: output
 
    - name: Print Results Tickets
