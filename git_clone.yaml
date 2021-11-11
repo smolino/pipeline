@@ -1,5 +1,5 @@
 ---
- - hosts: localhost
+ - hosts: AWX
    become_user: azureuser
    tasks:
    - name: Clone a github repository
