@@ -10,10 +10,10 @@
        version: experiment/ansible-mock
 
    - name: Run Script
-      shell: |
-        cd /home/azureuser/entando-pipeline/macro/
-        ./ansible-mock-script {{ ticket_number }} 
-      register: output
+     shell: |
+       cd /home/azureuser/entando-pipeline/macro/
+       ./ansible-mock-script {{ ticket_number }} 
+     register: output
 
    - name: Print Results Tickets
      debug:
