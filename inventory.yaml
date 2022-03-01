@@ -1,0 +1,3 @@
+- name: Export all inventories
+  tower_export:
+    inventory: 'all'
